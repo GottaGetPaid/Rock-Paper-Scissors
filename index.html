@@ -25,6 +25,24 @@
 
         let humanScore = 0;
         let computerScore = 0;
+
+        function playRound(humanChoice, computerChoice) {
+            humanChoice = humanChoice.toLowerCase();
+
+            if (humanChoice == computerChoice) {
+                console.log(`Tie! Both players chose ${humanChoice}`);
+                humanScore++;
+                computerScore++;
+            } else if ((humanChoice == "rock" && computerChoice == "paper") || (humanChoice == "paper" && computerChoice == "scissors") || (humanChoice == "scissors" && computerChoice == "paper")){
+                console.log(`You win! You chose ${humanChoice} and the computer chose ${computerChoice}`);
+                humanScore++;
+            } else {
+                console.log(`You lose! You chose ${humanChoice} and the computer chose ${computerChoice}`);
+                computerScore++;
+            }
+        }
+
+
     </script>
 </body>
 </html>
